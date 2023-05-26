@@ -14,25 +14,25 @@ int main(){
     push(i);
     printStack();
   }
-  cout << "±qStack¨ú¥X³Ì¤W­±ªº¤¸¯À¬°"<<pop()<<endl; 
+  cout << "å¾žStackå–å‡ºæœ€ä¸Šé¢çš„å…ƒç´ ç‚º"<<pop()<<endl; 
   printStack();
 }
 void push(int n){
   if(st.top == 99) {
-    cout << "Stack¬Oº¡ªº" << endl;
+    cout << "Stackæ˜¯æ»¿çš„" << endl;
   } else {    
     st.s[++st.top]=n;
   }
 }
 int pop(){
   if(st.top == -1) {
-    cout << "Stack¬OªÅªº" << endl; 
+    cout << "Stackæ˜¯ç©ºçš„" << endl; 
   } else {
     return st.s[st.top--];
   }
 }
 void printStack(){
-  cout << "Stack¥Ø«eÀx¦sªº¤¸¯À¦³";
+  cout << "Stackç›®å‰å„²å­˜çš„å…ƒç´ æœ‰";
   for(int i=0;i<=st.top;i++){
     cout << st.s[i] <<" ";
   }
