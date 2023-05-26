@@ -15,25 +15,25 @@ int main(){
     insertQueue(i);
     printQueue();   
   }
-  cout<<"±qQueue¨ú¥X³Ì«e­±ªº¤¸¯À¬°"<<deleteQueue()<<endl; 
+  cout<<"å¾žQueueå–å‡ºæœ€å‰é¢çš„å…ƒç´ ç‚º"<<deleteQueue()<<endl; 
   printQueue();
 }
 void insertQueue(int n){
   if(qu.back == 99) {
-    cout << "Queue¬Oº¡ªº" << endl;
+    cout << "Queueæ˜¯æ»¿çš„" << endl;
   } else {    
     qu.q[++qu.back]=n;
   }
 }
 int deleteQueue(){
   if(qu.front == qu.back) {
-    cout << "Queue¬OªÅªº" << endl; 
+    cout << "Queueæ˜¯ç©ºçš„" << endl; 
   } else {
     return qu.q[++qu.front];
   }
 }
 void printQueue(){
-  cout << "Queue¥Ø«eÀx¦sªº¤¸¯À¦³";
+  cout << "Queueç›®å‰å„²å­˜çš„å…ƒç´ æœ‰";
   for(int i=qu.front+1;i<=qu.back;i++){
     cout << qu.q[i] <<" ";
   }
