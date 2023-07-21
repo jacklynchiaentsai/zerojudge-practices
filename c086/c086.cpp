@@ -3,26 +3,30 @@ using namespace std;
 
 
 int main() {
+  ios::sync_with_stdio(0),cin.tie(0),cout.tie(0);
+
   int selection = 1;
   int n,x, card[20];
-  while (cin>>n){
-    vector<int> line;
+  vector<int> line;
+  
+  while (cin>>n>>x){
+    line.clear();
+    
     for(int i=1; i<=n; i++){
       line.push_back(i);
     }
-    cin>> x;
-    
     
     bool done = false;
-    
-    // special case: if n==x
-    if (n == x){
-      goto PrintAns;
-    }
-    
+
     // drawing cards
     for(int i=0; i<20; i++)
       cin>>card[i];
+    
+    // special case: if n==x
+    if (n <= x){
+      goto PrintAns;
+    }
+    
     
     for(int i=0; i<20; i++){
       auto it = line.begin()+card[i]-1;
@@ -52,6 +56,7 @@ int main() {
       else
         cout<< line[i]<< " ";
     }
+    
     cout<< endl;
   }
 }
